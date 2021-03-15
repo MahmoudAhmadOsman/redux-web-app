@@ -1,0 +1,26 @@
+========== install ==================
+ npm install redux react-redux redux-thunk 
+
+========================================================================================
+
+create the following folders and follow these steps
+
+- types
+- actions
+- reducers
+- store
+
+=========================================================
+- TYPES
+  => Inside types, create types.js. In this file, you will need to create all actions for your project such as FETCH_PRODUCTS, FILER_PRODUCTS_BY_SIZE, ORDER_PRODUCTS_BY_PRICE, ADD_TO_CART, REMOVE_FROM_CART, CREATE_ORDER, CLEAR_ORDER, CLEAR_CART and so forth with capital letters because that is the best practice.
+
+- ACTIONS
+=> Inside actions folder, create productActions.js file and create fetchProduct function that makes a fetch request to the backend or remote api. This function excepts dispatch as a parameter  and it can be async function. Also, in the dispatch, you need to have two objects, type and payload. The type is the name of the action that you have created inside types.js folder and payload you can set it to the response that is comming from the fetch request if you are using fetch method or axios library.
+
+- REDUCERS
+ => Inside Reducers folder, create all reducers for your project or application using switch and case by checking each action for every TYPES of action such as FETCH_PRODUCTS & FILER_PRODUCTS_BY_SIZE and so forth.
+
+
+
+
+   
