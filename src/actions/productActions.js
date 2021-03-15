@@ -1,3 +1,4 @@
+//Step: 2
 import { FETCH_PRODUCTS } from "../types/types";
 
 //For Action 1 dispatch and payload

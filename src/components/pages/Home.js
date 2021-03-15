@@ -1,26 +1,26 @@
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Component } from "react";
+
+import Navbar from "../Navbar";
+import Products from "../Products";
+import Landing from "../Landing";
 
 export class Home extends Component {
   render() {
-    //console.log(this.props);
-
-    const items = this.props.items;
     return (
-      <div>
-        <h1>Home</h1>
-        <hr />
-        <h4>Props from App.js</h4>
-        {/* Loop through items */}
-        {items.map((item) => (
-          <div key={item.id}>
-            <p>{item.occupation}</p>
-            <p>{item.school}</p>
-            <p>{item.major}</p>
-
-            <hr />
-          </div>
-        ))}
-      </div>
+      <Router>
+        <main classNameName="main-content">
+          <Navbar />
+          <Switch>
+            <Route exact path="/" >
+              <Landing />
+            </Route>
+            <Route path="/products">
+              <Products />
+            </Route>
+          </Switch>
+        </main>
+      </Router>
     );
   }
 }

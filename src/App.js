@@ -1,36 +1,27 @@
 import React from "react";
-
-import "./App.css";
+// import data from "./data.json";
+import "./App.scss";
 import Home from "./components/pages/Home";
+import Products from "./components/Products";
 
 class App extends React.Component {
-  //Send Array of items to the Home.js component using state
-  //Then, use map() function to loop thorugh these items
-  state = {
-    items: [
-      {
-        id: 1,
-        name: "Mahmoud Osman",
-        occupation: "Software Engineer",
-      },
-      {
-        id: 2,
-        school: "Champlain College",
-        major: "Computer Science",
-      },
-      {
-        id: 3,
-        school: "CCV",
-        major: "Computer Science",
-      },
-    ],
-  };
-
+  // constructor() {
+  //   super();
+  //   this.state = {
+  //     products: data.products,
+  //     size: "",
+  //     sort: "",
+  //   };
+  // }
   render() {
+    const productTitles = "All Products"; //Pass title to Products.js as a props
     return (
       <div className="app">
-        {/* <Home name="Mahmoud" occupation="Software Engineer" /> */}
-        <Home items={this.state.items} />
+        <Home />
+        {/* <Products
+          products={this.state.products}
+          productTitles={productTitles}
+        ></Products> */}
       </div>
     );
   }
