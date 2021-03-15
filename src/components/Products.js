@@ -32,11 +32,15 @@ class Products extends Component {
                   <div className="card-body">
                     <h4 className="card-title">{product.title}</h4>
                     <p className="card-text">{product.description}</p>
-                    <button href="#" className="btn btn-outline-danger" disabled>
+                    <button
+                      href="#"
+                      className="btn btn-outline-danger"
+                      disabled
+                    >
                       ${product.price}
                     </button>
                     <a href="#" className="btn btn-outline-danger ml-2">
-                ADD TO CART
+                      ADD TO CART
                     </a>
                   </div>
                 </div>
