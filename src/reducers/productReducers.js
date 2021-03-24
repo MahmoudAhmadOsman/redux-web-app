@@ -1,16 +1,13 @@
-//Step: 3
-
 import { FETCH_PRODUCTS } from "../types/types";
 
-//All REDUCERS
-// productReducer takes (state, {}, action)
-export const productReducer = (state, {}, action) => {
-  //First test on switch
+export const productsReducer = (state = {}, action) => {
   switch (action.type) {
     case FETCH_PRODUCTS:
-          return {
-              item: action.payload
-          };
-      detault: return state;
+      return {
+        items: action.payload,
+      };
+    default:
+      return state;
   }
 };
+//3. Go to Filter component and use connect() function

@@ -1,30 +1,19 @@
 import React from "react";
-// import data from "./data.json";
-import "./App.scss";
-import Home from "./components/pages/Home";
-import Products from "./components/Products";
+import { Provider } from "react-redux";
+import Post from "./components/Post";
+import PostForm from "./components/PostForm";
+import store from "./store/store";
 
-class App extends React.Component {
-  // constructor() {
-  //   super();
-  //   this.state = {
-  //     products: data.products,
-  //     size: "",
-  //     sort: "",
-  //   };
-  // }
-  render() {
-    const productTitles = "All Products"; //Pass title to Products.js as a props
-    return (
-      <div className="app">
-        <Home />
-        {/* <Products
-          products={this.state.products}
-          productTitles={productTitles}
-        ></Products> */}
+function App() {
+  return (
+    <Provider store={store}>
+      <div>
+        <PostForm />
+        <hr />
+        <Post />
       </div>
-    );
-  }
+    </Provider>
+  );
 }
 
 export default App;
