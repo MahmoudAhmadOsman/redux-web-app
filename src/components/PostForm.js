@@ -35,7 +35,7 @@ class PostForm extends Component {
       <div className="container">
         <div className="row">
           <div className="col-md-12">
-            <h1>Add Post</h1>
+            <h1 className="text-danger">Add Post</h1> <hr/>
             <form onSubmit={this.onSubmit}>
               <div className="form-group">
                 <label>Title </label>
@@ -45,8 +45,9 @@ class PostForm extends Component {
                   name="title"
                   onChange={this.onChange}
                   value={this.state.title}
-                  classname="form-control"
+                  className="form-control"
                   placeholder="Enter post title"
+                  required
                 />
               </div>
               <br />
@@ -57,8 +58,11 @@ class PostForm extends Component {
                   name="body"
                   onChange={this.onChange}
                   value={this.state.body}
-                  classname="form-control"
+                  className="form-control"
                   placeholder="Enter post body"
+                  rows="10"
+                  cols="10"
+                  required
                 />
               </div>
               <br />
